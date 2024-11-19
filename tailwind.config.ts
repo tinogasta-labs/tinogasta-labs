@@ -18,6 +18,15 @@ export default {
       fontFamily: {
         sans: ['Space Grotesk Variable', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        canvas: 'hsl(var(--canvas))',
+        panel: 'hsl(var(--panel))',
+        fg: {
+          DEFAULT: 'hsl(var(--fg-default))',
+          muted: 'hsl(var(--fg-muted))',
+        },
+        accent: 'hsl(var(--accent))',
+      },
     },
   },
   plugins: [],

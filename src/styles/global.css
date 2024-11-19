@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: 210 8% 95%;
+    --panel: 282 18% 86%;
+    --fg-default: 0 0% 9%;
+    --fg-muted: 0 0% 25%;
+    --accent: 216 38% 8%;
+  }
+
+  body {
+    @apply min-h-screen min-w-80 bg-canvas text-fg antialiased;
+  }
+}
