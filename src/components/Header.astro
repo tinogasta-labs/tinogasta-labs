@@ -1,6 +1,38 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const links = [
+  { label: 'Servicios', href: '/services' },
+  { label: 'Nosotros', href: '/about' },
+  { label: 'Contacto', href: '/contact' },
+  { label: 'Blog', href: '/blog' },
+]
+---
+
 <header>
-  <nav class="flex items-center justify-between pb-10 pt-4 text-fg-muted">
-    <a href="/">Tinogasta Labs</a>
-    <button>M</button>
+  <nav
+    class="flex items-center justify-between pb-10 pt-4 text-fg-muted sm:pb-12 sm:pt-10"
+  >
+    <a
+      href="/"
+      class="whitespace-nowrap font-medium uppercase tracking-wide sm:text-lg"
+      >Tinogasta Labs</a
+    >
+    <button class="p-1.5 md:hidden">
+      <Icon class="size-6" name="hamburger-menu" />
+    </button>
+    <div class="hidden w-auto md:flex">
+      <ul class="flex items-center gap-3 p-3 md:gap-6 md:p-0 lg:gap-8">
+        {
+          links.map(link => (
+            <li>
+              <a href={link.href} class="px-4 py-3 md:p-0 md:text-lg">
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </nav>
 </header>
